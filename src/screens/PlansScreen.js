@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
 import db from "../firebase";
 import "./PlansScreen.css";
-import { loadStripe } from "@stripe/stripe-js";
+// import { loadStripe } from "@stripe/stripe-js";
 
 function PlansScreen() {
   const [products, setProducts] = useState([]);
@@ -74,10 +74,10 @@ function PlansScreen() {
         // We have a session, let's redirect to Checkout
         // Init Stripe
 
-        const stripe = await loadStripe(
-          "pk_test_51IHY5bGxTMskvQrGCC0gRGHoiphdjCAqSM92Nt453P9E4jevxDyczNtZ3eLHo2JQs5UecOzyche1jXaBArRMrIzT00FL6I5P1G"
-        );
-        stripe.redirectToCheckout({ sessionId });
+        // const stripe = await loadStripe(
+        //   "pk_test_51IHY5bGxTMskvQrGCC0gRGHoiphdjCAqSM92Nt453P9E4jevxDyczNtZ3eLHo2JQs5UecOzyche1jXaBArRMrIzT00FL6I5P1G"
+        // );
+        // stripe.redirectToCheckout({ sessionId });
       }
     });
   };
